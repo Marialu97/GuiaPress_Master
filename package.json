@@ -1,0 +1,32 @@
+{
+  "name": "guiapress",
+  "version": "1.0.0",
+  "description": "Criando um blog",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon .",
+    "herokuDeploy": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiohscruz/GuiaPress.git"
+  },
+  "author": "caiohscruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiohscruz/GuiaPress/issues"
+  },
+  "homepage": "https://github.com/caiohscruz/GuiaPress#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.21.2",
+    "express-session": "^1.17.2",
+    "multer": "^2.0.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.6.5",
+    "slugify": "^1.6.0"
+  }
+}

@@ -1,0 +1,42 @@
+<!-- Inclui head -->
+<%- include("./partials/header.ejs") %>
+
+<body>
+
+    <%- include("./partials/home-navbar.ejs") %>
+
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-4">Vortexus</h1>
+            <p class="lead">Biblioteca Virtual de Livros e Áudios</p>
+            <hr class="my-4">
+            <p>"Com o Vortexus, o conhecimento fala com você.
+                Livros e áudios acessíveis, onde e quando você precisar.
+                Aprender nunca foi tão fácil."</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="/about" role="button">Saiba mais</a>
+            </p>
+        </div>
+
+        <% result.articles.rows.forEach(article => { %>
+
+        <div class="card">
+            <div class="card-header">
+                <h5><%= article.title %></h5>
+                <p>Categoria: <%= article.category.title %></p>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success" href="/read/<%= article.slug %>">Ler artigo</a>
+            </div>
+        </div>
+
+        <% }) %>
+
+        <%- include("./partials/pagination.ejs") %>
+
+    </div>
+</body>
+<!-- Inclui footer -->
+<%- include("./partials/footer.ejs") %>
